@@ -18,4 +18,13 @@ struct SampleAPIClient {
     struct Response: Decodable {
         let text: String
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
