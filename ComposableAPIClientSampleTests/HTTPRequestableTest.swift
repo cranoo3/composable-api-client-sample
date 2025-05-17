@@ -29,6 +29,7 @@ struct HTTPRequestableTest {
         }
     }
     
+    
     @Test
     func testCorrectFormatConversion() {
         let mock = TestHTTPRequestable(
