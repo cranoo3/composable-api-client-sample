@@ -20,7 +20,6 @@ struct HTTPRequestableTest {
         } catch {
             print(error.localizedDescription)
         }
-        
     }
 }
 
