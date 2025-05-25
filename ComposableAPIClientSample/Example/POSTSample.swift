@@ -65,8 +65,31 @@ final class POSTSampleViewModel {
 }
 
 struct POSTSample: View {
+    @State private var viewModel = POSTSampleViewModel()
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            List {
+                Text("Hello")
+                
+                if !viewModel.responseMessage.isEmpty {
+                    Text(viewModel.responseMessage)
+                }
+            }
+        }
+        .safeAreaInset(edge: .bottom) {
+            Button {
+                viewModel.fetch()
+            } label: {
+                Text("Hello")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.white, in: RoundedRectangle(cornerRadius: 25.0))
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.ultraThinMaterial)
+        }
     }
 }
 
